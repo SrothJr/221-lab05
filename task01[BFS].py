@@ -24,8 +24,8 @@ def topsort_bfs(adj, v):
 
     return order
 
-input_file = open("input01[2].txt", "r")
-output_file = open("output01[2].txt", "w")
+input_file = open("input/input01[BFS].txt", "r")
+output_file = open("output/output01[BFS].txt", "w")
 
 n, m = [int(i) for i in input_file.readline().strip().split(" ")]
 

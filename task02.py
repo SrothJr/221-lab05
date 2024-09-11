@@ -32,8 +32,8 @@ def lex_topsort(adj): #....From smallest to biggest value
             print(i, end=" ", file= output_file)
 
 
-input_file = open("input02.txt", "r")
-output_file = open("output02.txt", "w")
+input_file = open("input/input02.txt", "r")
+output_file = open("output/output02.txt", "w")
 
 n, m = [int(i) for i in input_file.readline().strip().split(" ")]
 

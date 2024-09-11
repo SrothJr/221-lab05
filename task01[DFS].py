@@ -37,8 +37,8 @@ def dfs(graph, v, ordering, visited):
             dfs(graph, i, ordering, visited)
             ordering.append(i)
 
-input_file = open("input01.txt", "r")
-output_file = open("output01.txt", "w")
+input_file = open("input/input01[DFS].txt", "r")
+output_file = open("output/output01[DFS].txt", "w")
 graph = cnvrt2graph(input_file)
 ordering = []
 visited = []
