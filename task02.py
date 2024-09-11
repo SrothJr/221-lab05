@@ -1,6 +1,6 @@
-import heapq as hq
+import heapq as hq #...Heap usages priority queue 
 
-def lex_topsort(adj):
+def lex_topsort(adj): #....From smallest to biggest value
     v = len(adj)
     indeg = [0] * v
 
@@ -16,7 +16,7 @@ def lex_topsort(adj):
     top_ord = []
 
     while o:
-        node = hq.heappop(o)
+        node = hq.heappop(o)        #.... Pops and returns the smallest value of the given list (o)
         top_ord.append(node)
 
         for i in adj[node]:
@@ -25,7 +25,7 @@ def lex_topsort(adj):
             if indeg[i] == 0:
                 hq.heappush(o, i)
 
-    if len(top_ord) != v:
+    if len(top_ord) != v:       #..... If the len of resulting list is not the same size as the total nodes, there's a cycle
         print("IMPOSSIBLE", file= output_file)
     else:
         for i in top_ord:
@@ -44,6 +44,8 @@ edges = []
 for i in range(m):
     edges.append([int(i) for i in input_file.readline().strip().split(" ")]) 
 
+# Creating a adj-list which will store the destinations on the index same as the value of source
+# Better works when values are from 0 - N and continuos 
 adj = [[] for _ in range(n)]
 
 for i in edges:
