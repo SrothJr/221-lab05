@@ -1,7 +1,7 @@
 def cnvrt2graph(input_file): #.....COverting to a dictionary
     n, m = input_file.readline().strip().split(" ")
 
-    graph = {}
+    graph = {} # creating the hosting graph
     for i in range(1, int(n)+1):
         graph[i] = []
 
