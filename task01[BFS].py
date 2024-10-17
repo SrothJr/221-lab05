@@ -1,5 +1,5 @@
 from collections import deque
-# Kahn's algorithm for topological sorting: https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
+# Kahn's algorithm for topological sorting: https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/ [copied so need work]
 
 def topsort_bfs(adj, v):
     indeg = [0] * len(adj)        #.....For storing indegree values, only values with 0 indegrees can be enqued first. 
